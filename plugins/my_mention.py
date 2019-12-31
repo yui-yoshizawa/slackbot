@@ -22,19 +22,18 @@ import json
 # message.react('icon_emoji')  発言者のメッセージにリアクション(スタンプ)する
 #                               文字列中に':'はいらない
 
-@respond_to('メンション')
+@respond_to('')
 def mention_func(message):
-    message.reply('私にメンションと言ってどうするのだ') # メンション
+    message.reply('ぼくは悪いスライムじゃないよ') # メンション
 
-@respond_to('スタンプ')
+@respond_to('疲れ')
 def cool_func(message):
-    message.reply('スタンプ押しとくね')     # メンション
-    message.react('+1')     # リアクション
+    message.reply('スラりんは ホイミ をとなえた！\nしかし MPがたりなかった！')     # メンション
+    message.react('otu')     # リアクション
 
-@listen_to('リッスン')
+@listen_to('悪いスライム')
 def listen_func(message):
-    message.send('誰かがリッスンと投稿したようだ')      # ただの投稿
-    message.reply('君だね？')                           # メンション
+    message.send('ぼくは悪いスライムじゃないよ')      # ただの投稿
 
 @respond_to('今日の天気')
 def weather(message):
